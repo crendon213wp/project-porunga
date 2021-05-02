@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project Porunga - Dragon Ball Z Dokan Battle</title>
+</head>
+<body>
+
+    <section id="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-hover-white navbar-hover-light" id="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="/docs/4.6/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Characters<span class="sr-only">(current)</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Events
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Strategy
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Items
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>  
+    </section>
+
+    <section id="carousel">
+        <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item drk active" id="carousel-1">
+                <img v-bind:src="img.src" class="d-block w-100" v-bind:alt="img.alt">
+                <div class="carousel-caption d-none d-md-block py-5">
+                  <h1 class="display-3">{{ title }}</h1>
+                  <p>{{ message }}</p>
+                  <button type="button" class="btn btn-light">{{ button }}</button>
+                </div>
+              </div>
+              <div class="carousel-item drk" id="carousel-2">
+                <img v-bind:src="img.src" class="d-block w-100" v-bind:alt="img.alt">
+                <div class="carousel-caption d-none d-md-block py-5">
+                  <h1 class="display-3">{{ title }}</h1>
+                  <p>{{ message }}</p>
+                  <button type="button" class="btn btn-light">{{ button }}</button>
+                </div>
+              </div>
+              <div class="carousel-item drk" id="carousel-3">
+                <img v-bind:src="img.src" class="d-block w-100" v-bind:alt="img.alt">
+                <div class="carousel-caption d-none d-md-block py-5">
+                  <h1 class="display-3">{{ title }}</h1>
+                  <p>{{ message }}</p>
+                  <button type="button" class="btn btn-light">{{ button }}</button>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </section>
+
+    <section id="twoBoxes">
+        <div class="container-fluid">
+            <div class="row py-2">
+                <div class="col-md-6 py-2 leftBox text-center card" id="box-1">
+                  <img class="img-fluid" v-bind:src="img.src" v-bind:alt="img.alt">
+                  <div class="d-flex align-items-center card-img-overlay">
+                    <div class="w-100 py-3">
+                      <h1 class="display-4 text-white font-weight-bold mb-4">{{ title }}</h1>
+                      <button type="button" class="btn btn-light">{{ button }}</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 py-2 rightBox text-center card" id="box-2">
+                  <img class="img-fluid" v-bind:src="img.src" v-bind:alt="img.alt">
+                  <div class="d-flex align-items-center card-img-overlay">
+                    <div class="w-100 py-3">
+                      <h1 class="display-4 text-white font-weight-bold mb-4">{{ title }}</h1>
+                      <button type="button" class="btn btn-light">{{ button }}</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="threeBoxes">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 leftBox text-center card" id="oneThree">
+                  <img class="img-fluid" v-bind:src="img.src" v-bind:alt="img.alt">
+                  <div class="d-flex align-items-center card-img-overlay">
+                    <div class="w-100 py-3">
+                      <h1 class="display-3 text-white font-weight-bold mb-4">{{ title }}</h1>
+                      <button type="button" class="btn btn-light">{{ button }}</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 px-2 text-center card" id="twoThree">
+                  <img class="img-fluid"  v-bind:src="img.src" v-bind:alt="img.alt">
+                  <div class="d-flex align-items-center card-img-overlay">
+                    <div class="w-100 py-3">
+                      <h1 class="display-3 text-white font-weight-bold mb-4">{{ title }}</h1>
+                      <button type="button" class="btn btn-light">{{ button }}</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 rightBox text-center card" id="threeThree">
+                  <img class="img-fluid"  v-bind:src="img.src" v-bind:alt="img.alt">
+                  <div class="d-flex align-items-center card-img-overlay">
+                    <div class="w-100 py-3">
+                      <h1 class="display-3 text-white font-weight-bold mb-4">{{ title }}</h1>
+                      <button type="button" class="btn btn-light">{{ button }}</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="social-media">
+        <div class="container-fluid">
+            <div class="row justify-content-center py-5">
+              <div class="col-md-2 text-center apple-logo" id="sm-icon">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#626262" fill-rule="evenodd" d="M15.3 3.832C16.14 2.818 16.704 1.405 16.55 0c-1.208.049-2.67.805-3.535 1.819c-.777.898-1.457 2.335-1.273 3.712c1.346.105 2.722-.684 3.56-1.699m3.02 8.918c.034 3.632 3.186 4.841 3.22 4.857c-.025.085-.502 1.722-1.66 3.413c-1 1.462-2.038 2.919-3.674 2.949c-1.607.029-2.123-.953-3.961-.953c-1.836 0-2.41.923-3.932.982c-1.578.06-2.78-1.581-3.79-3.037c-2.06-2.98-3.635-8.42-1.52-12.092C4.054 7.045 5.932 5.89 7.97 5.861c1.55-.03 3.013 1.043 3.96 1.043c.948 0 2.726-1.29 4.595-1.101c.783.033 2.979.316 4.39 2.381c-.114.07-2.621 1.53-2.594 4.566"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+                </a>                
+              </div>
+              <div class="col-md-2 text-center" id="sm-icon">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+                </a>                
+              </div>
+              <div class="col-md-2 text-center" id="sm-icon">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#EA4335" d="M5.266 9.765A7.077 7.077 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582L19.91 3C17.782 1.145 15.055 0 12 0C7.27 0 3.198 2.698 1.24 6.65l4.026 3.115z"/><path fill="#34A853" d="M16.04 18.013c-1.09.703-2.474 1.078-4.04 1.078a7.077 7.077 0 0 1-6.723-4.823l-4.04 3.067A11.965 11.965 0 0 0 12 24c2.933 0 5.735-1.043 7.834-3l-3.793-2.987z"/><path fill="#4A90E2" d="M19.834 21c2.195-2.048 3.62-5.096 3.62-9c0-.71-.109-1.473-.272-2.182H12v4.637h6.436c-.317 1.559-1.17 2.766-2.395 3.558L19.834 21z"/><path fill="#FBBC05" d="M5.277 14.268A7.12 7.12 0 0 1 4.909 12c0-.782.125-1.533.357-2.235L1.24 6.65A11.934 11.934 0 0 0 0 12c0 1.92.445 3.73 1.237 5.335l4.04-3.067z"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+                </a>                
+              </div>
+              <div class="col-md-2 text-center" id="sm-icon">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></g><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+                </a>                
+              </div>
+              <div class="col-md-2 text-center" id="sm-icon">
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M19.633 7.997c.013.175.013.349.013.523c0 5.325-4.053 11.461-11.46 11.461c-2.282 0-4.402-.661-6.186-1.809c.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721a4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062c.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973a4.02 4.02 0 0 1-1.771 2.22a8.073 8.073 0 0 0 2.319-.624a8.645 8.645 0 0 1-2.019 2.083z" fill="#626262"/><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+                </a>                
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container-fluid">
+            <div class="row text-center py-5">
+                <div class="col">
+                  <p class="">
+                    &copy; 2021. All rights reservered
+                    <hr>
+                    This is a fan made mobile first website based on the game, Dragon Ball Z - Dokkan Battle, the free-to-play mobile game based on everyone's favorite anime franchise, Dragon Ball. The game is developed by Akatsuki, published by Bandai Namco Entertainment, and is available on Android and iOS based on a magna created by Akira Toriyama.
+                  </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bundle.min.js"></script>
+</body>
+</html>
